@@ -1,5 +1,5 @@
 FROM golang:latest
-MAINTAINER Michele Bertasi
+MAINTAINER Marek Romanowski
 
 ADD fs/ /
 
@@ -45,6 +45,6 @@ USER dev
 ENV HOME /home/dev
 
 # install vim plugins
-RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    vim +PlugInstall +qall
+RUN git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime && \
+    sh ~/.vim_runtime/install_awesome_vimrc.sh && \
+    git clone --depth=1 https://github.com/fatih/vim-go ~/.vim_runtime/my_plugins/vim-go

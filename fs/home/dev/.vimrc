@@ -23,7 +23,7 @@ set ts=4
 set sw=4
 set number
 set cursorline
-set scrolloff=999
+set scrolloff=10
 set encoding=utf-8
 colorscheme molokai
 

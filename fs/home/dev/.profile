@@ -12,4 +12,6 @@ else
   export TERM='xterm-color'
 fi
 
+alias ll="ls -lah"
+
 mesg n
